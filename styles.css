@@ -1,0 +1,19 @@
+#ui-datepicker-div {
+  display: none;
+}
+
+#edit_div_custom {
+  font-size: 20px;
+}
+
+#bad_website_custom {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.left-col {
+  padding-top: 100vh;
+}

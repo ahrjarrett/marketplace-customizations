@@ -1,5 +1,4 @@
 
-
 /*** PATH STUFF: ***/
 let { pathname } = window.location
 let businessPath = /\/businesses\/\d+$/
@@ -41,13 +40,24 @@ let applyLogoPathStyles = () => {
   mpLogo.style.border = '1px solid lightgrey'
 }
 
-let applyEditPathStyles = () => {
+let applyEditPathBehavior = () => {
   let websiteInput = document.querySelector('#business_website')
+  let mainContent = document.querySelector('#content')
   let websiteUrl = websiteInput.value
 
-  console.log(testForHttpPrefix(websiteUrl))
+  if (websiteUrl && !testForHttpPrefix(websiteUrl)) {
+    let errorDiv = document.createElement('a')
+    errorDiv.text = 'Bad Website!'
+    errorDiv.id = 'bad_website_custom'
+    errorDiv.addEventListener(
+      'click',
+      () => window.open(`http://${websiteUrl}`, '_blank')
+    )
 
+    mainContent.prepend(errorDiv)
+  }
 }
+
     
 if (window.location.host === 'admin.austin.ownlocal.com') {
   if (testPath(businessPath)) {
@@ -55,7 +65,7 @@ if (window.location.host === 'admin.austin.ownlocal.com') {
   }
     
   if (testPath(editPath)) {
-    applyEditPathStyles()
+    applyEditPathBehavior()
   }
 
   if(testPath(logoPath)) {

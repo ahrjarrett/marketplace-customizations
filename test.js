@@ -6,6 +6,10 @@ let testForHttpPrefix = url => {
   return re.test(url)
 }
 
+
+
+/*** TESTS: ***/
+
 let testElement = {
   childNodes: [1,2,3]
 }
