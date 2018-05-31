@@ -11,6 +11,10 @@ let testPathname = pathname => re => re.test(pathname)
 // testPath :: Regex -> Bool
 let testPath = testPathname(pathname)
 let getNthChild = (n, el) => el.childNodes[n - 1]
+let testForHttpPrefix = url => {
+  let re = /^https?:\/\//
+  return re.test(url)
+}
 
 let applyBusinessPathStyles = () => {
   let mainContent = document.getElementById('content')
@@ -40,8 +44,8 @@ let applyLogoPathStyles = () => {
 let applyEditPathStyles = () => {
   let websiteInput = document.querySelector('#business_website')
   let websiteUrl = websiteInput.value
-  console.log(websiteUrl)
-  
+
+  console.log(testForHttpPrefix(websiteUrl))
 
 }
     
