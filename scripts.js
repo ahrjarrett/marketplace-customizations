@@ -1,4 +1,3 @@
-
 /*** PATH STUFF: ***/
 let { pathname } = window.location
 let businessPath = /\/businesses\/\d+$/
@@ -34,9 +33,7 @@ let applyBusinessPathStyles = () => {
     
 
 let applyLogoPathStyles = () => {
-  let mpLogo = document.querySelector('.edit_business')
-      .childNodes[5].childNodes[0]
-
+	let mpLogo = document.querySelectorAll('img')[1]
   mpLogo.style.border = '1px solid lightgrey'
 }
 
@@ -44,7 +41,17 @@ let applyEditPathBehavior = () => {
   let websiteInput = document.querySelector('#business_website')
   let mainContent = document.querySelector('#content')
   let websiteUrl = websiteInput.value
+  let iFrameWindow,
+      aboutContent
 
+  window.addEventListener('load', () => {
+    iFrameWindow = document.querySelector('.cke_wysiwyg_frame').contentWindow
+
+    iFrameWindow.document.body.addEventListener('load', () => console.log('loaded!'))
+		
+  })
+
+	
   if (websiteUrl && !testForHttpPrefix(websiteUrl)) {
     let errorDiv = document.createElement('a')
     errorDiv.text = 'Bad Website!'
@@ -72,3 +79,4 @@ if (window.location.host === 'admin.austin.ownlocal.com') {
     applyLogoPathStyles()
   }
 }
+
