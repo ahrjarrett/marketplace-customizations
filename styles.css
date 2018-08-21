@@ -61,7 +61,8 @@
 
 #sticky_footer_wrap td span {
   color: #dcdccc;
-
+  font-weight: 300;
+  letter-spacing: .0375em
 }
 
 #sticky_footer_wrap tbody {
@@ -96,4 +97,10 @@
 
 #sticky_footer_wrap #duplicates_form table.data.duplicate_businesses tbody tr:hover {
   background: #1e2320 !important;
+}
+
+
+/* CATEGORIES */
+#sticky_footer_wrap #categories_form div {
+  background: #2f3330;
 }
