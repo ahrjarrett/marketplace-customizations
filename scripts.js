@@ -14,6 +14,10 @@ let testForHttpPrefix = url => {
   return re.test(url)
 }
 
+let applyAdminPathStyles = () => {
+  
+}
+
 let applyBusinessPathStyles = () => {
   let mainContent = document.getElementById('content')
   let leftCol = document.querySelector('.left-col')

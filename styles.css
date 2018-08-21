@@ -17,3 +17,85 @@
 .left-col {
   padding-top: 100vh;
 }
+
+#business_name {
+	width: 80%;
+}
+#business_website {
+	width: 100%;
+}
+
+
+/* ZENBURN */
+#sticky_footer_wrap {
+	background: #464646;
+}
+
+#sticky_footer_wrap label {
+	color: #dfdec5;
+}
+
+#sticky_footer_wrap input {
+	background: #2f3330;
+	/* color: #709080; */
+	color: #b7d7b3;
+	border: 0px;
+}
+
+#sticky_footer_wrap h3 {
+	color: #dcdccc;
+}
+
+#sticky_footer_wrap a {
+	color: #b7d7b3;
+	
+}
+
+/*
+#sticky_footer_wrap * {
+	font-family: Courier;
+}
+*/
+
+#sticky_footer_wrap .blue {
+	background: #2f3330 !important;
+}
+
+#sticky_footer_wrap td span {
+	color: #dcdccc;
+
+}
+
+#sticky_footer_wrap tbody {
+	background: #3f3f3f;
+	color: #f0dfaf;
+}
+
+#sticky_footer_wrap td a {
+	color: #b7d7b3;
+}
+
+#sticky_footer_wrap #business_list td a {
+	color: #709080;
+}
+
+#sticky_footer_wrap tr.odd {
+	background: #464646;
+}
+
+#sticky_footer_wrap table.data th {
+	background: #1e2320;
+	color: #bca3a3;
+}
+
+#sticky_footer_wrap #duplicates_form table.data.duplicate_businesses thead tr th[data-is-sortable] {
+	color: #dca3a3;
+}
+
+#sticky_footer_wrap #business_list th {
+	border: 1px solid #dcdccc;
+}
+
+#sticky_footer_wrap #duplicates_form table.data.duplicate_businesses tbody tr:hover {
+  background: #1e2320 !important;
+}
