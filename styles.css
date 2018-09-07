@@ -1,3 +1,4 @@
+
 #ui-datepicker-div {
   display: none;
 }
@@ -31,6 +32,44 @@
   background: #464646;
 }
 
+#sticky_footer_wrap p, em {
+  color: #ffcfaf;
+}
+
+/* WORK IN PROGRESS */
+/*
+   #sticky_footer_wrap h2 {
+   color: #ffcfaf !important;
+   }
+ */
+
+#sticky_footer_wrap h4 {
+  color: #dcdccc;
+}
+
+#sticky_footer_wrap #header-bg {
+  background: #1e2320;
+}
+
+#sticky_footer_wrap #sub-header-bg {
+  background: #3f3f3f;
+}
+
+#sticky_footer_wrap #nav li a {
+  color: #cc9393;
+}
+
+#sticky_footer_wrap #sub-header h2 {
+  color: #dcdccc !important;
+  text-shadow: none;
+}
+
+#sticky_footer_wrap #sub-nav li a {
+  color: #dcdccc;
+  text-shadow: none;
+}
+
+
 #sticky_footer_wrap label {
   color: #dfdec5;
 }
@@ -47,8 +86,18 @@
 }
 
 #sticky_footer_wrap a {
-  color: #b7d7b3;
+  color: #ecbcbc;
+  /* color: #b7d7b3; */
   
+}
+
+#sticky_footer_wrap a#view_my_listing {
+  background: #8f8f8f !important;
+  color: #dcdccc;
+}
+
+#sticky_footer_wrap #subcategory_list li {
+  color: #cc9393;
 }
 
 #sticky_footer_wrap * {
@@ -103,4 +152,58 @@
 /* CATEGORIES */
 #sticky_footer_wrap #categories_form div {
   background: #2f3330;
+}
+
+#sticky_footer_wrap .update_primary_button {
+  background: #1e2320;
+}
+
+
+/* businesses/:id/ads */
+#sticky_footer_wrap #adforge_list_header {
+  background: #3f3f3f;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#sticky_footer_wrap #adforge_list_header h3 {
+  color: #dcddcc;
+}
+
+#sticky_footer_wrap #adforge_list_header .ol_list {
+  box-shadow: none;
+}
+
+#sticky_footer_wrap .ol_lightgrey_gradient {
+  background: #3f3f3f;
+  border: 1px solid #6f6f6f;
+}
+
+#sticky_footer_wrap .ol_lightgrey_gradient .ol_list_title {
+  color: #f0dfaf;
+}
+
+#sticky_footer_wrap .ol_lightgrey_gradient .ol_list_title h4 {
+  color: #709080;
+}
+
+#sticky_footer_wrap .ol_lightgrey_gradient .ol_list_details {
+  color: #dcdccc;
+}
+
+/* businesses/?query=:query */
+#sticky_footer_wrap #business_list td a {
+  color: #9fafaf !important;
+}
+#sticky_footer_wrap #business_list tr.level_1 td {
+  background: #6f6f6f;
+}
+
+#sticky_footer_wrap .sub-nav-active a {
+  background: #464646 !important;
+  color: #dcdccc !important;
+}
+
+#sticky_footer_wrap .accounts li.odd { 
+  background: #3f3f3f;
 }
