@@ -71,9 +71,16 @@
 
 #sticky_footer_wrap input {
   background: #2f3330;
+  color: #b7d7b3;
   /* color: #709080; */
+  border: 0px;
+}
+
+#sticky_footer_wrap select {
+  background: #2f3330;
   color: #b7d7b3;
   border: 0px;
+  height: 22px;
 }
 
 #sticky_footer_wrap h3 {
