@@ -19,13 +19,15 @@
   padding-top: 100vh;
 }
 
-#business_name {
+#sticky_footer_wrap #business_name {
   width: 80%;
 }
-#business_website {
+#sticky_footer_wrap #business_website {
   width: 100%;
 }
-
+#sticky_footer_wrap #business_address {
+  width: 100%;
+}
 
 /* ZENBURN */
 #sticky_footer_wrap {
@@ -35,13 +37,6 @@
 #sticky_footer_wrap p, em {
   color: #ffcfaf;
 }
-
-/* WORK IN PROGRESS */
-/*
-   #sticky_footer_wrap h2 {
-   color: #ffcfaf !important;
-   }
- */
 
 #sticky_footer_wrap h4 {
   color: #dcdccc;
@@ -207,3 +202,5 @@
 #sticky_footer_wrap .accounts li.odd { 
   background: #3f3f3f;
 }
+
+
