@@ -29,6 +29,11 @@
   width: 100%;
 }
 
+#sticky_footer_wrap .paid_listing_notice {
+	display: none;
+}
+
+
 /* ZENBURN */
 #sticky_footer_wrap {
   background: #464646;
@@ -209,5 +214,4 @@
 #sticky_footer_wrap .accounts li.odd { 
   background: #3f3f3f;
 }
-
 
