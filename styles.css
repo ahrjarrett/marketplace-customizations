@@ -1,4 +1,11 @@
 
+#sticky_footer_wrap #operation-accordion .ui-state-default { 
+	background: #9fafaf;
+}
+#sticky_footer_wrap #operation-accordion .ui-accordion-header-active {
+	background: #709080;
+} 
+
 #ui-datepicker-div {
   display: none;
 }
@@ -102,6 +109,10 @@
   background: #8f8f8f !important;
   color: #dcdccc;
 }
+#sticky_footer_wrap a#go_to_directory {
+  background: #8f8f8f !important;
+  color: #dcdccc;	
+}
 
 #sticky_footer_wrap #subcategory_list li {
   color: #cc9393;
@@ -155,7 +166,6 @@
   background: #1e2320 !important;
 }
 
-
 /* CATEGORIES */
 #sticky_footer_wrap #categories_form div {
   background: #2f3330;
@@ -203,7 +213,7 @@
   color: #9fafaf !important;
 }
 #sticky_footer_wrap #business_list tr.level_1 td {
-  background: #6f6f6f;
+  background: rgb(47, 51, 48);
 }
 
 #sticky_footer_wrap .sub-nav-active a {
