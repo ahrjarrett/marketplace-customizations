@@ -1,9 +1,25 @@
+/*** METROLAND RE AUDIT STYLES ***/
+
+/*
+   .ad-detail-container {
+   display: flex !important;
+   flex-direction: column;
+   }
+   .ad-detail-container :nth-child(3) { order: -1; }
+   #origami-collapse {
+   display: flex; flex-direction: column;
+   }
+ */
+
+/*** END METROLAND RE AUDIT STYLES ***/
+
+
 
 #sticky_footer_wrap #operation-accordion .ui-state-default { 
-	background: #9fafaf;
+  background: #9fafaf;
 }
 #sticky_footer_wrap #operation-accordion .ui-accordion-header-active {
-	background: #709080;
+  background: #709080;
 } 
 
 #ui-datepicker-div {
@@ -37,7 +53,7 @@
 }
 
 #sticky_footer_wrap .paid_listing_notice {
-	display: none;
+  display: none;
 }
 
 
@@ -225,3 +241,29 @@
   background: #3f3f3f;
 }
 
+#sticky_footer_wrap :nth-child(4) {
+  color: rgb(223, 222, 197);
+}
+
+
+/* DEDUPING */
+#sticky_footer_wrap .merge-status-selecting {
+  background: #709080 !important;
+}
+#sticky_footer_wrap #duplicates_form .merge-status-selecting a, span.keyboard-hint {
+  color: #dcdccc !important;
+}
+
+#sticky_footer_wrap .merge-status-waiting {
+  background: #1e2320 !important;
+}
+
+/* This applies to text inside bottom dialog while merge is pending */
+#sticky_footer_wrap .merge-status-waiting-visible {
+  color: #dca3a3;
+}
+
+/* merge succeeded */
+#sticky_footer_wrap .merge-status-succeeded {
+  background: #333333 !important;
+}
