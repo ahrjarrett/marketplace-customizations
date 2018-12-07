@@ -1,15 +1,34 @@
-/*** METROLAND RE AUDIT STYLES ***/
+/*** DEFUNCT PROJECT STYLES ***/
 
 /*
-   .ad-detail-container {
-   display: flex !important;
+   .edit_marketplace_config {
+   display: flex;
    flex-direction: column;
    }
-   .ad-detail-container :nth-child(3) { order: -1; }
-   #origami-collapse {
-   display: flex; flex-direction: column;
+
+   #marketplace_config_activity_report_email_to {
+   order: -1;
    }
+
+   #marketplace_config_publisher_ad_detailed_list_contact_email { order: -1; }
+   #marketplace_config_publisher_ad_notification_emails {
+   order: -1; }
+   #marketplace_config_publisher_ad_report_contact_email { order: -1;}
  */
+
+/*** END DEFUNCT PROJECT STYLES ***/
+
+
+/*** METROLAND RE AUDIT STYLES ***/
+
+.ad-detail-container {
+  display: flex !important;
+  flex-direction: column;
+}
+.ad-detail-container :nth-child(3) { order: -1; }
+#origami-collapse {
+  display: flex; flex-direction: column;
+}
 
 /*** END METROLAND RE AUDIT STYLES ***/
 
