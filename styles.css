@@ -47,21 +47,30 @@
 
 /*** METROLAND RE AUDIT STYLES ***/
 
-/*
-   .ad-detail-container {
+/* .ad-detail-container {
    display: flex !important;
    flex-direction: column;
-   }
- */
+   } 
+*/
 
-
-/*
-   .ad-detail-container :nth-child(3) { order: -1; }
+/* .ad-detail-container :nth-child(3) { order: -1; }
    #origami-collapse {
    display: flex; flex-direction: column;
-   }
+   } 
+*/
 
- */
+/* label[for="ad_business_name"] + span a {
+   position: absolute;
+   top: 60px;
+   }
+*/
+
+/*
+a[href^="http://s3.amazonaws.com/ownlocal.adforge.production/ads/"] {
+  position: absolute;
+  top: 60px;
+}
+*/
 
 /*** END METROLAND RE AUDIT STYLES ***/
 
