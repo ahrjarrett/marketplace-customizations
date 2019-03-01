@@ -84,3 +84,17 @@ if (window.location.host === 'admin.austin.ownlocal.com') {
   }
 }
 
+
+// http://admin.austin.ownlocal.com/mch/publishers/1348/invoices/2618086
+
+let tds = []
+let trs = document.querySelectorAll("tr")
+
+trs.forEach(tr => tds.push(tr.children[1]))
+
+// Make text RED if Featured Level AdForge line item (for deduping stuff)
+tds.forEach(td => {
+  if (td.innerText === "Featured Level AdForge") {
+    td.style.color = "red"
+  }
+})
