@@ -85,16 +85,70 @@ if (window.location.host === 'admin.austin.ownlocal.com') {
 }
 
 
-// http://admin.austin.ownlocal.com/mch/publishers/1348/invoices/2618086
 
-let tds = []
-let trs = document.querySelectorAll("tr")
+// ROUTE: http://admin.austin.ownlocal.com/mch/publishers/<pub_id>/invoices/<inv_id>
 
-trs.forEach(tr => tds.push(tr.children[1]))
+function deleteLineItems() {
 
-// Make text RED if Featured Level AdForge line item (for deduping stuff)
-tds.forEach(td => {
-  if (td.innerText === "Featured Level AdForge") {
-    td.style.color = "red"
-  }
-})
+  let products = []
+  let trs = document.querySelectorAll("tr")
+  let deletedCount = 0
+  let deletedIds = []
+  
+  trs.forEach(tr => {
+    let product = tr.children[1]
+    if (product.innerText === "Featured Level AdForge") {
+      products.push(product)
+    }
+  })
+  
+  products.forEach(product => {
+    let row = product.parentElement
+    let descriptionTd = row.children[2]
+    let businessTd    = row.children[3]
+    let removeTd      = row.children[7]
+    let unitCost      = row.children[4].innerText
+    let lineTotal     = row.children[6].innerText
+    
+    let price = "$5.00"
+    // hasAds: TRUE if any child of businessTd's innerText starts with "Ads"
+    let hasAds = false
+    let costsFive = (unitCost === price && lineTotal === price) ? true : false
+    
+    /*** DOM MUTATIONS ***/
+    businessTd.children.forEach = Array.prototype.forEach
+    businessTd.children.forEach(child => {
+      if(child.innerText.startsWith("Ads:")) {
+	hasAds = true
+      }
+    })
+    
+    if (hasAds) {
+      product.style.color = "green"
+      // DON'T DELETE! return instead
+      return
+    }
+    
+    if (!costsFive) {
+      product.style.color = "yellow"
+      // DON'T DELETE! return instead
+      return
+    }
+    
+    if (descriptionTd.innerText === "") {
+      // DELETE THIS LINE ITEM!
+      product.style.color = "red"
+      // get ID from end of href:
+      let id = removeTd.children[1].href.split("/").reverse()[0]
+      
+      /*** ACTUALLY DELETE ITEM! ***/
+      removeTd.children[1].click()
+      
+      deletedCount = deletedCount + 1
+      console.log(`DELETED LINE ITEM #${deletedCount}; ID: ${id}`)
+    }
+    
+  })
+}
+
+// deleteLineItems()
